@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica de evaluación Socket</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js"></script>
+</head>
+<body>
+
+    <div id="panel-bienvenida">
+        <h2>Práctica de evaluación usando Sockets de comunicación - Ing. Alex R.G.</h2>
+        <input id="persona" type="text" placeholder="Ingresa tu nombre">
+        <button id="ingresar" onclick="ingresarAlChat()">Ingresar al chat</button>
+    </div>
+
+    <div id="app-chat" class="app-chat-hidden">
+        <h2>Práctica de evaluación 1er. parcial </h2>
+        <h2 class="nube box">Chat con socket</h2>
+        
+        <!-- Contador de mensajes no leídos -->
+        <div id="contador-mensajes" class="contador-mensajes"></div>
+        
+        <!-- Controles de notificaciones -->
+        <div id="controles-notificaciones" class="controles-notificaciones">
+            <label>
+                <input type="checkbox" id="toggle-notificaciones" checked> 
+                Activar notificaciones y sonido
+            </label>
+            <button id="test-sonido" class="test-sonido">Probar sonido</button>
+            <button id="nuevo-chat" class="nuevo-chat">🆕 Nuevo Chat</button>
+            <button id="cerrar-chat" class="cerrar-chat">❌ Cerrar Chat</button>
+        </div>
+        
+        <div id="ventana-mensajes">
+            <div id="output"></div>
+            <div id="escribiendo-mensaje"></div>
+        </div>
+        <input id="usuario" type="text" placeholder="Tu nombre">
+        <input id="mensaje" type="text" placeholder="Ingresa un mensaje">
+        <button id="boton-enviar">Enviar</button>
+    </div>
+
+    <script src="/chat.js"></script>
+
+</body>
+</html>
